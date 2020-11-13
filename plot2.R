@@ -13,6 +13,7 @@ data$V1 <- as.Date(data$V1,"%d/%m/%Y")
 ##Assign column names
 colnames(data) <- read.table("household_power_consumption.txt",sep=";",nrows=1)
 
+windows(height = 6, width = 6)
 plot(data$Time,data$Global_active_power,type="n",xlab="", ylab="Global Active Power(kilowatts)")
 lines(data$Time,data$Global_active_power)
 dev.copy(png,filename="plot2.png",width=480,height=480)

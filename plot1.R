@@ -13,6 +13,7 @@ data$V1 <- as.Date(data$V1,"%d/%m/%Y")
 ##Assign column names
 colnames(data) <- read.table("household_power_consumption.txt",sep=";",nrows=1)
 ##Histogram
+windows(height = 6, width = 6)
 hist(data$Global_active_power,col="red",xlab="Global Active Power (kilowatts)",
      main="Global Active Power")
 dev.copy(png,filename="plot1.png",width=480,height=480)
